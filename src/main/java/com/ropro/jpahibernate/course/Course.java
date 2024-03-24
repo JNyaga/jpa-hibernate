@@ -16,6 +16,18 @@ public class Course {
         this.author = author;
     }
 
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
     public long getId() {
         return id;
     }

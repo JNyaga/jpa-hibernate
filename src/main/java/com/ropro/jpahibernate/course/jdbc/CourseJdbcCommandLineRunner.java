@@ -16,7 +16,12 @@ public class CourseJdbcCommandLineRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         repository.insert(new Course(1, "Learn Aws Now", "Joel"));
+        repository.insert(new Course(2, "Learn Magic Now", "Joe"));
+        repository.insert(new Course(3, "Learn Laravel Now", "amey"));
         repository.deleteById(1);
+
+        System.out.println(repository.findById(2l));
+        System.out.println(repository.findById(3l));
     }
 
 }
