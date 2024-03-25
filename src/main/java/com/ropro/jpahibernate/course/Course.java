@@ -1,7 +1,15 @@
 package com.ropro.jpahibernate.course;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Course {
+
+    @Id
     public long id;
+    @Column(name = "name")
     private String name;
     private String author;
 

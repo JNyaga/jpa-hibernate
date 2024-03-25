@@ -1,17 +1,21 @@
-package com.ropro.jpahibernate.course.jdbc;
+package com.ropro.jpahibernate.course;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import com.ropro.jpahibernate.course.Course;
+import com.ropro.jpahibernate.course.jdbc.CoureJdbcRepository;
+import com.ropro.jpahibernate.course.jpa.CourseJpaRepository;
 
 // runs at startup
 @Component
-public class CourseJdbcCommandLineRunner implements CommandLineRunner {
+public class CourseCommandLineRunner implements CommandLineRunner {
+
+    // @Autowired
+    // private CoureJdbcRepository repository;
 
     @Autowired
-    private CoureJdbcRepository repository;
+    private CourseJpaRepository repository;
 
     @Override
     public void run(String... args) throws Exception {
